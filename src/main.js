@@ -1,8 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import store from './store'
+
+import FastClick from 'fastclick'
+FastClick.attach(document.body)
+
+import '@scripts/common'
+import '@utils/filters'
+
+import '@styles/resets.css'
+import '@styles/border.css'
+import '@styles/common.css'
+import '@styles/iconfont.css'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  router,
+  store,
+  render: (h) => h(App),
 }).$mount('#app')
